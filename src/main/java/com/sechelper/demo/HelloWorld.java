@@ -8,6 +8,9 @@ public class HelloWorld {
 
     @RequestMapping("/hello")
     private String hello(User user){
+        if(user.getName() == null){
+			return "hello world";
+		}
         return "hello " + user.getName();
     }
 }
